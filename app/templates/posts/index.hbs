@@ -1,0 +1,26 @@
+
+<div class="container">
+{{#each model as |post|}}
+    <h3>{{post.title}}</h3>
+    <p>{{post.body}}</p>
+    <p><strong>By:</strong> {{post.user.name}}</p>  
+    <button
+        type="button"
+        class="btn btn-primary"
+        onclick={{action "viewPost" post.id}}
+      >
+        View Post
+      </button>
+
+    <button
+        type="button"
+        class="btn btn-danger"
+        onclick={{route-action "deletePost" post}}
+      >
+        Delete
+      </button>
+      
+      
+    <hr />
+{{/each}}
+</div>

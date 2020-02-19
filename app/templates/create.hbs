@@ -1,0 +1,15 @@
+<div class="container">
+    <form onsubmit={{action "createPost"}}>
+        <div class="form-group">
+            <label for="title">Title</label>
+            {{input type="text" class="form-control" id="title" value=title}}
+        </div>
+        <div class="form-group">
+            <label for="body">Write Feedback</label>
+            {{textarea id="body" class="form-control" rows="8" cols="80" value=body}}
+        </div>
+
+        <button class="btn btn-primary" type="submit" data-test="publish">Publish</button>
+    </form>
+</div>
+
